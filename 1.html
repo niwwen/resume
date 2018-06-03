@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./a.css">
     <link rel="stylesheet" href="./loading.css">
     <script src="https://at.alicdn.com/t/font_637564_7c4hpczaq9gm0a4i.js"></script>
-    <script>
-        src = "https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <style type="text/css">
         .icon {
             width: 1em;
@@ -220,13 +218,14 @@
             siteWelcome.classList.remove('active')
         }, 1000)
 
-        window.onscroll = function(xxx) {
+        window.onscroll = function(x) {
             if (window.scrollY > 0) { //滚动
                 topNavBar.classList.add('sticky')
             } else {
                 topNavBar.classList.remove('sticky')
             }
         }
+        console.log(window.scrollY)
 
         let liTags = document.querySelectorAll('nav.menu > ul > li') //接受一个选择器返回选择器对应的所有元素
         for (let i = 0; i < liTags.length; i++) {
